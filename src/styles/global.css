@@ -1,0 +1,67 @@
+@import 'tailwindcss';
+
+/*
+ * Paleta de colores oficial (WORK.md): gama de azules infantil y confiable.
+ * Se redefinen los tonos solicitados para que las utilidades de Tailwind
+ * (`bg-blue-600`, `bg-blue-800`, `bg-sky-200`, `bg-sky-500`) usen los
+ * valores exactos del proyecto.
+ */
+@theme {
+  --color-blue-600: #1e6091; /* Azul Primario (Confianza / Cielo) */
+  --color-blue-800: #184e77; /* Azul Secundario (Mar / Diversión) */
+  --color-sky-200: #b5e2fa; /* Azul Claro (Acento y Fondos) */
+  --color-sky-500: #0077b6; /* Azul Eléctrico (Acción / Botones) */
+  --color-cloud: #edf2f4; /* Fondo claro neutro */
+  --color-sun: #ffd166; /* Amarillo Sol (estrellas / logros) */
+  --color-night: #0b2a45; /* Azul noche (fondo de juego) */
+
+  --font-sans:
+    'Segoe UI Rounded', 'SF Pro Rounded', 'Nunito', ui-rounded, system-ui,
+    'Segoe UI', Roboto, sans-serif;
+
+  --radius-kid: 1.5rem;
+  --shadow-kid: 0 10px 30px -12px rgb(30 96 145 / 0.45);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-cloud text-blue-800 font-sans antialiased;
+    min-height: 100svh;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply text-blue-800 font-extrabold;
+  }
+
+  :focus-visible {
+    @apply outline-4 outline-offset-2 outline-sky-500;
+  }
+
+  button,
+  a {
+    @apply cursor-pointer;
+  }
+}
+
+/* El lienzo de Phaser se inserta dentro del contenedor de cada juego. */
+.gh-game-canvas canvas {
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

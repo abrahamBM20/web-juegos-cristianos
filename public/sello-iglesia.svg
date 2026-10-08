@@ -1,0 +1,51 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 160 160"
+  width="160"
+  height="160"
+  role="img"
+  aria-label="Sello institucional de la iglesia (marcador de posición)"
+>
+  <defs>
+    <linearGradient id="selloFondo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1E6091" />
+      <stop offset="1" stop-color="#184E77" />
+    </linearGradient>
+  </defs>
+
+  <circle cx="80" cy="80" r="76" fill="#EDF2F4" stroke="#B5E2FA" stroke-width="4" />
+  <circle cx="80" cy="80" r="66" fill="url(#selloFondo)" />
+  <circle
+    cx="80"
+    cy="80"
+    r="57"
+    fill="none"
+    stroke="#FFD166"
+    stroke-width="2"
+    opacity="0.85"
+  />
+
+  <path
+    d="M80 40 V104 M61 62 H99"
+    stroke="#FFD166"
+    stroke-width="9"
+    stroke-linecap="round"
+  />
+
+  <circle cx="52" cy="118" r="2.6" fill="#B5E2FA" />
+  <circle cx="80" cy="124" r="3.4" fill="#FFD166" />
+  <circle cx="108" cy="118" r="2.6" fill="#B5E2FA" />
+
+  <text
+    x="80"
+    y="150"
+    text-anchor="middle"
+    font-family="'Segoe UI', system-ui, sans-serif"
+    font-size="12"
+    font-weight="700"
+    letter-spacing="2"
+    fill="#1E6091"
+  >
+    IGLESIA
+  </text>
+</svg>
